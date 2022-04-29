@@ -4,12 +4,12 @@ section {
     gap: 4rem;
 
     main {
-	    margin: auto;
-	    
+        margin: auto;
+
         ul {
             display: flex;
             flex-wrap: wrap;
-	        gap: 10rem;
+            gap: 10rem;
 
             li {
                 flex: 1 0 auto;
@@ -24,8 +24,8 @@ section {
 
                 .title::before {
                     content: "";
-	
-	                display: block;
+
+                    display: block;
 
                     border-block-end: 0.2rem solid currentColor;
                 }

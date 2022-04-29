@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {DarkModeComponent} from './dark-mode/dark-mode.component';
-import {LightModeComponent} from './light-mode/light-mode.component';
+import {AparatComponent} from './aparat/aparat.component';
+import {InstagramComponent} from './instagram/instagram.component';
+import {TelegramComponent} from './telegram/telegram.component';
 
 @NgModule({
-    declarations: [DarkModeComponent, LightModeComponent],
+    declarations: [AparatComponent, InstagramComponent, TelegramComponent],
     imports: [CommonModule],
-    exports: [DarkModeComponent, LightModeComponent],
+    exports: [AparatComponent, InstagramComponent, TelegramComponent],
 })
 export class IconsModule {}

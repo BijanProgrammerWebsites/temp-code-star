@@ -3,12 +3,14 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
 import {IconsModule} from '../icons/icons.module';
+import {LogosModule} from '../logos/logos.module';
 
 import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
-    declarations: [HeaderComponent],
-    imports: [CommonModule, RouterModule, IconsModule],
-    exports: [HeaderComponent],
+    declarations: [HeaderComponent, FooterComponent],
+    imports: [CommonModule, RouterModule, IconsModule, LogosModule],
+    exports: [HeaderComponent, FooterComponent],
 })
 export class ComponentsModule {}
