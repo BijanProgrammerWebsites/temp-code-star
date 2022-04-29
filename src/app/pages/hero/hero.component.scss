@@ -1,0 +1,26 @@
+section {
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding-inline: var(--full-width-padding-inline);
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h1 {
+            max-width: 20ch;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+
+        a {
+            margin-block-start: 4rem;
+        }
+    }
+}
