@@ -1,0 +1,62 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    min-height: 100vh;
+
+    padding-inline: var(--full-width-padding-inline);
+
+    header {
+    }
+
+    main {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .question {
+                    border-block-end: 0.3rem solid transparent;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        border-block-end-color: currentColor;
+                    }
+                }
+
+                .answer {
+                    .box {
+                        display: none;
+                    }
+
+                    .text {
+                        display: none;
+                    }
+                }
+
+                &.active {
+                    .question {
+                        border-block-end-color: currentColor;
+                    }
+
+                    .answer {
+                        .box {
+                            display: block;
+                        }
+
+                        .text {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
