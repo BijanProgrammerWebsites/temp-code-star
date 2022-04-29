@@ -162,6 +162,15 @@ body {
     font-size: 1.6rem;
 }
 
+section {
+    min-height: 100vh;
+
+    padding-block: 10rem;
+    padding-inline: var(--full-width-padding-inline);
+
+    border: 2px solid black;
+}
+
 h1 {
     font-size: 6rem;
     font-weight: 800;

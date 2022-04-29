@@ -3,13 +3,6 @@ section {
     flex-direction: column;
     gap: 4rem;
 
-    min-height: 100vh;
-
-    padding-inline: var(--full-width-padding-inline);
-
-    header {
-    }
-
     main {
         ul {
             display: flex;

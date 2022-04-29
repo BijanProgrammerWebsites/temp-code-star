@@ -1,0 +1,39 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    main {
+	    margin: auto;
+	    
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+	        gap: 10rem;
+
+            li {
+                flex: 1 0 auto;
+
+                .number {
+                    margin-block-end: -3rem;
+
+                    font-size: 14.4rem;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                .title::before {
+                    content: "";
+	
+	                display: block;
+
+                    border-block-end: 0.2rem solid currentColor;
+                }
+
+                .title {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+}
