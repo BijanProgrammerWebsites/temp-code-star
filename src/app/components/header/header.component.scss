@@ -19,6 +19,10 @@ header {
 
     nav {
         ul {
+	        display: flex;
+	        align-items: center;
+	        gap: 4rem;
+	        
             li {
                 a {
                     font-size: 2.4rem;
