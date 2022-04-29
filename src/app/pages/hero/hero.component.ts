@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {IntersectionObserverService} from '../../services/intersection-observer.service';
 
 @Component({
     selector: 'app-hero',
@@ -8,38 +9,9 @@ import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 export class HeroComponent implements AfterViewInit {
     @ViewChild('section') private section!: ElementRef<HTMLElement>;
 
-    private observer!: IntersectionObserver;
+    public constructor(private service: IntersectionObserverService) {}
 
     public ngAfterViewInit(): void {
-        this.initializeIntersectionObserver();
-    }
-
-    private initializeIntersectionObserver(): void {
-        this.observer = new IntersectionObserver(
-            (entries: IntersectionObserverEntry[]) => {
-                entries.forEach((entry) => {
-                    const element: HTMLElement | null = entry.target as HTMLElement;
-                    if (!element || !entry.isIntersecting) return;
-
-                    element.classList.add('fade-in');
-
-                    this.observer.unobserve(element);
-                });
-            },
-            {
-                threshold: 0,
-            }
-        );
-
-        this.observeElements();
-    }
-
-    private observeElements(): void {
-        const items: HTMLElement[] = Array.from(
-            this.section.nativeElement.querySelectorAll('.watermark, .line, p, .button')
-        );
-        items.forEach((item) => {
-            this.observer.observe(item);
-        });
+        this.service.initializeIntersectionObserver(this.section.nativeElement, '.watermark, .line, p, .button');
     }
 }

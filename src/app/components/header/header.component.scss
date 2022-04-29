@@ -17,12 +17,24 @@ header {
 
     user-select: none;
 
+    a {
+        transition: opacity var(--animation--duration--slow) 0.2s;
+
+        &:not(.fade-in) {
+            opacity: 0;
+        }
+
+        &.fade-in {
+            opacity: 1;
+        }
+    }
+
     nav {
         ul {
-	        display: flex;
-	        align-items: center;
-	        gap: 4rem;
-	        
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+
             li {
                 a {
                     font-size: 2.4rem;

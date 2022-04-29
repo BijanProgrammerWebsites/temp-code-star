@@ -8,12 +8,10 @@ import {ComponentsModule} from './components/components.module';
 import {PagesModule} from './pages/pages.module';
 import {PipesModule} from './pipes/pipes.module';
 
-import {FlipService} from './services/flip.service';
-
 @NgModule({
     declarations: [AppComponent],
     imports: [BrowserModule, AppRoutingModule, ComponentsModule, PagesModule, PipesModule],
-    providers: [FlipService],
+    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
