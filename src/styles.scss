@@ -51,8 +51,8 @@
 html {
     font-family: Peyda, sans-serif;
     font-size: 62.5%;
-	
-	scroll-behavior: smooth;
+
+    scroll-behavior: smooth;
 }
 
 input,
@@ -98,20 +98,12 @@ button,
     font-weight: 700;
     text-align: center;
 
-    transition: transform var(--animation--duration--fast) ease-in-out;
-
     cursor: pointer;
 
-    &:hover {
-        box-shadow: var(--box-shadow--subtle);
-
-        transform: translateY(-0.3rem);
+    &::selection {
+        background-color: var(--color--primary-opposite);
+        color: var(--color--primary);
     }
-	
-	&::selection {
-		background-color: var(--color--primary-opposite);
-		color: var(--color--primary);
-	}
 }
 
 input {

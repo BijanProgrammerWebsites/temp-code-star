@@ -7,7 +7,7 @@ section {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
         h2 {
-            transition: transform var(--animation--duration--normal) ease-in-out;
+            transition: transform var(--animation--duration--slow);
         }
 
         &:not(.fade-in) {
@@ -33,7 +33,7 @@ section {
 
             > li {
                 h3 {
-                    transition: opacity var(--animation--duration--normal) ease-in-out;
+                    transition: opacity var(--animation--duration--slow);
 
                     &:not(.fade-in) {
                         opacity: 0;
@@ -62,7 +62,7 @@ section {
                         font-family: IRANSansX, sans-serif;
                         font-size: 1.8rem;
 
-                        transition: transform var(--animation--duration--normal) ease-in-out;
+                        transition: transform var(--animation--duration--slow);
 
                         &::selection {
                             background-color: var(--color--primary-opposite);

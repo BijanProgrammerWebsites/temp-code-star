@@ -43,8 +43,6 @@ export class RequirementsComponent implements AfterViewInit {
 
     private observeElements(section: HTMLElement): void {
         const items: HTMLElement[] = Array.from(section.querySelectorAll('header, h3, li'));
-        console.log(items);
-
         items.forEach((item) => {
             this.observer.observe(item);
         });
