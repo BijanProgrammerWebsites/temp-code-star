@@ -1,0 +1,30 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    main {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8rem;
+
+            li {
+                --padding: 4rem;
+
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                padding: var(--padding);
+
+                h3 {
+                }
+
+                p {
+                    max-width: 70ch;
+                }
+            }
+        }
+    }
+}

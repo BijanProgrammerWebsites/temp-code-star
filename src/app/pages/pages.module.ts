@@ -13,6 +13,7 @@ import {TimelineComponent} from './timeline/timeline.component';
 import {RequirementsComponent} from './requirements/requirements.component';
 import {ContentComponent} from './content/content.component';
 import {TechnologiesModule} from '../technologies/technologies.module';
+import {ConceptsComponent} from './concepts/concepts.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import {TechnologiesModule} from '../technologies/technologies.module';
         TimelineComponent,
         RequirementsComponent,
         ContentComponent,
+        ConceptsComponent,
     ],
     imports: [CommonModule, RouterModule, ComponentsModule, PipesModule, LogosModule, TechnologiesModule],
     exports: [
@@ -31,6 +33,7 @@ import {TechnologiesModule} from '../technologies/technologies.module';
         TimelineComponent,
         RequirementsComponent,
         ContentComponent,
+        ConceptsComponent,
     ],
 })
 export class PagesModule {}
