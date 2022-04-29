@@ -1,24 +1,40 @@
 header {
+    background-color: var(--color--body-background);
+
+    position: absolute;
+    inset-block-start: 0;
+    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
 
+    width: 100%;
+
     padding-block: var(--shell--padding);
-    padding-inline: 2rem;
+    padding-inline: var(--full-width-padding-inline);
 
     user-select: none;
 
-    .logo {
-        background-color: var(--color--header-logo-background);
-        color: var(--color--header-logo-foreground);
-
-        font-size: 2.4rem;
-        font-weight: 700;
-
-        &:hover {
-            background-color: var(--color--header-logo-background--hover);
-            color: var(--color--header-logo-foreground--hover);
+    nav {
+        ul {
+            li {
+                a {
+                    font-size: 2.4rem;
+                }
+            }
         }
+    }
+
+    .logo {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+
+        height: 1em;
+
+        font-size: 4rem;
+        font-weight: 400;
     }
 }
