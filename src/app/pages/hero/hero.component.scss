@@ -1,4 +1,6 @@
 section {
+    position: relative;
+
     display: flex;
     align-items: center;
 
@@ -7,10 +9,38 @@ section {
         flex-direction: column;
         gap: 2rem;
 
-        max-width: 80rem;
+        max-width: 100rem;
 
         a {
             margin-block-start: 4rem;
         }
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline-end: var(--full-width-padding-inline);
+        overflow: hidden;
+
+        font-size: 7.2rem;
+
+        .arrow {
+            animation: hero-scroll-indicator-animation 2s infinite;
+        }
+    }
+}
+
+@keyframes hero-scroll-indicator-animation {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    20%,
+    80% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
     }
 }
