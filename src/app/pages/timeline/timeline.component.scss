@@ -45,7 +45,12 @@ section {
                     padding: 2rem 3rem;
 
                     border-radius: var(--border-radius);
-
+	
+	                *::selection {
+		                background-color: var(--color--primary-opposite);
+		                color: var(--color--primary);
+	                }
+	                
                     .title {
                     }
 

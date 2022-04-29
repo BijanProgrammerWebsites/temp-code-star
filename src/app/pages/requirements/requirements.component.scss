@@ -29,6 +29,11 @@ section {
 
                         font-family: IRANSansX, sans-serif;
                         font-size: 1.8rem;
+
+                        &::selection {
+                            background-color: var(--color--primary-opposite);
+                            color: var(--color--primary);
+                        }
                     }
                 }
             }

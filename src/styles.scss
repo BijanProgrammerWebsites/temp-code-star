@@ -105,6 +105,11 @@ button,
 
         transform: translateY(-0.3rem);
     }
+	
+	&::selection {
+		background-color: var(--color--primary-opposite);
+		color: var(--color--primary);
+	}
 }
 
 input {

@@ -35,6 +35,8 @@ section {
                 }
 
                 &.active {
+	                margin-block-end: 4rem;
+	                
                     .question {
                         border-block-end-color: currentColor;
                     }
