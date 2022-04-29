@@ -5,6 +5,8 @@ section {
 
     main {
         > ul {
+            direction: ltr;
+
             display: flex;
             flex-direction: column;
             gap: 4rem;
