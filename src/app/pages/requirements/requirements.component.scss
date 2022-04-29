@@ -3,6 +3,26 @@ section {
     flex-direction: column;
     gap: 4rem;
 
+    header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        h2 {
+            transition: transform var(--animation--duration--normal) ease-in-out;
+        }
+
+        &:not(.fade-in) {
+            h2 {
+                transform: translateY(100%);
+            }
+        }
+
+        &.fade-in {
+            h2 {
+                transform: translateY(0%);
+            }
+        }
+    }
+
     main {
         > ul {
             direction: ltr;
@@ -12,6 +32,18 @@ section {
             gap: 4rem;
 
             > li {
+                h3 {
+                    transition: opacity var(--animation--duration--normal) ease-in-out;
+
+                    &:not(.fade-in) {
+                        opacity: 0;
+                    }
+
+                    &.fade-in {
+                        opacity: 1;
+                    }
+                }
+
                 > ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -30,9 +62,21 @@ section {
                         font-family: IRANSansX, sans-serif;
                         font-size: 1.8rem;
 
+                        transition: transform var(--animation--duration--normal) ease-in-out;
+
                         &::selection {
                             background-color: var(--color--primary-opposite);
                             color: var(--color--primary);
+                        }
+
+                        &:not(.fade-in) {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+
+                        &.fade-in {
+                            opacity: 1;
+                            transform: scale(1);
                         }
                     }
                 }
