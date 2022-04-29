@@ -1,8 +1,22 @@
 section {
     position: relative;
-
+	overflow: hidden;
+	
     display: flex;
     align-items: center;
+
+    .watermark {
+        opacity: 0.05;
+
+        position: absolute;
+        inset-inline-end: 50%;
+
+        transform: translateX(-50%);
+
+        font-size: 30vw;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
 
     main {
         display: flex;
