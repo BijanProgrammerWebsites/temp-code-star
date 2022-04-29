@@ -1,0 +1,35 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    main {
+        > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            > li {
+                > ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    > li {
+                        flex: 1 0 auto;
+
+                        background-color: var(--color--primary);
+                        color: var(--color--primary-opposite);
+
+                        padding: 2rem;
+
+                        border-radius: var(--border-radius);
+
+                        font-family: IRANSansX, sans-serif;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
