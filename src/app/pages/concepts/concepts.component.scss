@@ -5,9 +5,9 @@ section {
 
     main {
         ul {
-            display: flex;
-            flex-direction: column;
-            gap: 8rem;
+	        display: grid;
+	        grid-template-columns: 1fr 1fr;
+            gap: 4rem;
 
             li {
                 --padding: 4rem;
@@ -22,7 +22,6 @@ section {
                 }
 
                 p {
-                    max-width: 70ch;
                 }
             }
         }
