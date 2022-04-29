@@ -27,7 +27,11 @@
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/assets/fonts/peyda/peyda.css", "src/styles.scss"],
+                        "styles": [
+                            "src/assets/fonts/Peyda/Peyda.css",
+                            "src/assets/fonts/IRANSansX/IRANSansX.css",
+                            "src/styles.scss"
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -90,7 +94,11 @@
                         "karmaConfig": "karma.conf.js",
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/assets/fonts/peyda/peyda.css", "src/styles.scss"],
+                        "styles": [
+                            "src/assets/fonts/Peyda/Peyda.css",
+                            "src/assets/fonts/IRANSansX/IRANSansX.css",
+                            "src/styles.scss"
+                        ],
                         "scripts": []
                     }
                 },
