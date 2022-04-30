@@ -5,8 +5,13 @@
 
     <main>
         <ul>
-            <li *ngFor="let item of items; index as index" [class.active]="item.isOpen">
-                <h3 class="question" (click)="questionClickHandler(index)">
+            <li
+                *ngFor="let item of items; index as index"
+                [class.active]="item.isOpen"
+                (click)="questionClickHandler(index)"
+            >
+                <div class="background"></div>
+                <h3 class="question">
                     <div class="text">{{ item.question }}</div>
                 </h3>
                 <div class="answer">

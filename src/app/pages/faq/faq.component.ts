@@ -14,7 +14,7 @@ interface Item {
     styleUrls: ['./faq.component.scss'],
 })
 export class FaqComponent implements AfterViewInit {
-    private readonly ANIMATION_DURATION: number = 1000;
+    private readonly ANIMATION_DURATION: number = 500;
 
     @ViewChild('section') private section!: ElementRef<HTMLElement>;
 
@@ -76,7 +76,7 @@ export class FaqComponent implements AfterViewInit {
     private generateDomRects(): Map<HTMLElement, DOMRect> {
         const result = new Map<HTMLElement, DOMRect>();
 
-        const elements: HTMLElement[] = Array.from(this.section.nativeElement.querySelectorAll('li'));
+        const elements: HTMLElement[] = Array.from(this.section.nativeElement.querySelectorAll('li, .background'));
         elements.forEach((element) => {
             result.set(element, element.getBoundingClientRect());
         });
