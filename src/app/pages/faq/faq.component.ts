@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, ViewChild} from '@angular/core';
+import {IntersectionObserverService} from '../../services/intersection-observer.service';
+import {FlipService} from '../../services/flip.service';
 
 interface Item {
     question: string;
@@ -11,7 +13,11 @@ interface Item {
     templateUrl: './faq.component.html',
     styleUrls: ['./faq.component.scss'],
 })
-export class FaqComponent {
+export class FaqComponent implements AfterViewInit {
+    private readonly ANIMATION_DURATION: number = 1000;
+
+    @ViewChild('section') private section!: ElementRef<HTMLElement>;
+
     public items: Item[] = [
         {
             question: 'آیا می‌توانم این دوره را به عنوان کارآموزی دانشگاه بگذرانم؟',
@@ -34,7 +40,47 @@ export class FaqComponent {
         },
     ];
 
-    public questionClickHandler(index: number): void {
-        this.items[index].isOpen = !this.items[index].isOpen;
+    private isPlaying: boolean = false;
+
+    public constructor(
+        private intersectionObserverService: IntersectionObserverService,
+        private flipService: FlipService,
+        private changeDetectorRef: ChangeDetectorRef
+    ) {}
+
+    public ngAfterViewInit(): void {
+        const options: IntersectionObserverInit = {rootMargin: '-120px 0px'};
+        this.intersectionObserverService.initObserver(this.section.nativeElement, 'header, h3', options);
+    }
+
+    public async questionClickHandler(index: number): Promise<void> {
+        if (this.isPlaying) return;
+        this.isPlaying = true;
+
+        const generateDomRects = this.generateDomRects.bind(this);
+        await FlipService.flip(
+            generateDomRects,
+            generateDomRects,
+            () => {
+                this.items[index].isOpen = !this.items[index].isOpen;
+                this.changeDetectorRef.detectChanges();
+            },
+            {
+                duration: this.ANIMATION_DURATION,
+            }
+        );
+
+        this.isPlaying = false;
+    }
+
+    private generateDomRects(): Map<HTMLElement, DOMRect> {
+        const result = new Map<HTMLElement, DOMRect>();
+
+        const elements: HTMLElement[] = Array.from(this.section.nativeElement.querySelectorAll('li'));
+        elements.forEach((element) => {
+            result.set(element, element.getBoundingClientRect());
+        });
+
+        return result;
     }
 }

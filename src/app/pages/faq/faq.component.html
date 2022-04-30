@@ -1,4 +1,4 @@
-<section id="faq">
+<section #section id="faq">
     <header>
         <h2>سوالات متدوال</h2>
     </header>
@@ -6,9 +6,10 @@
     <main>
         <ul>
             <li *ngFor="let item of items; index as index" [class.active]="item.isOpen">
-                <h3 class="question" (click)="questionClickHandler(index)">{{ item.question }}</h3>
+                <h3 class="question" (click)="questionClickHandler(index)">
+                    <div class="text">{{ item.question }}</div>
+                </h3>
                 <div class="answer">
-                    <div class="box"></div>
                     <p class="text">{{ item.answer }}</p>
                 </div>
             </li>

@@ -58,10 +58,9 @@ export class FlipService {
 
         invert.forEach((data, element) => {
             const translate = `translate(${data.x}px, ${data.y}px)`;
-            const scale = `scale(${data.scaleX}, ${data.scaleY})`;
-            const transform = `${translate} ${scale}`;
+            const transform = `${translate}`;
 
-            const animation = element.animate([{transform}, {transform: 'translate(0) scale(1)'}], {
+            const animation = element.animate([{transform}, {transform: 'translate(0)'}], {
                 duration: FlipService.ANIMATION_DURATION,
                 easing: FlipService.ANIMATION_EASING,
                 ...options,

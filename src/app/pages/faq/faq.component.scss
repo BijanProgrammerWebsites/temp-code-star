@@ -3,6 +3,26 @@ section {
     flex-direction: column;
     gap: 4rem;
 
+    header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        h2 {
+            transition: transform var(--animation--duration--slow);
+        }
+
+        &:not(.fade-in) {
+            h2 {
+                transform: translateY(100%);
+            }
+        }
+
+        &.fade-in {
+            h2 {
+                transform: translateY(0%);
+            }
+        }
+    }
+
     main {
         ul {
             display: flex;
@@ -15,39 +35,59 @@ section {
                 gap: 1rem;
 
                 .question {
-                    border-block-end: 0.3rem solid transparent;
+                    padding: 2rem;
+
+                    border-radius: var(--border-radius);
+
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
                     cursor: pointer;
 
                     &:hover {
-                        border-block-end-color: currentColor;
+                        background-color: var(--color--primary);
+                        color: var(--color--primary-opposite);
+                    }
+
+                    .text {
+                        transition: transform var(--animation--duration--slow);
+                    }
+
+                    &:not(.fade-in) {
+                        .text {
+                            transform: translateY(100%);
+                        }
+                    }
+
+                    &.fade-in {
+                        .text {
+                            transform: translateY(0%);
+                        }
                     }
                 }
 
                 .answer {
-                    .box {
-                        display: none;
-                    }
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
                     .text {
-                        display: none;
+                        transition: transform var(--animation--duration--slow) cubic-bezier(0.7, -0.3, 0.3, 1.3);
+
+                        height: 0;
+                        transform: translateY(-100%);
                     }
                 }
 
                 &.active {
-	                margin-block-end: 4rem;
-	                
+                    margin-block-end: 4rem;
+
                     .question {
-                        border-block-end-color: currentColor;
+                        background-color: var(--color--primary);
+                        color: var(--color--primary-opposite);
                     }
 
                     .answer {
-                        .box {
-                            display: block;
-                        }
-
                         .text {
-                            display: block;
+                            height: auto;
+                            transform: translateY(0%);
                         }
                     }
                 }
