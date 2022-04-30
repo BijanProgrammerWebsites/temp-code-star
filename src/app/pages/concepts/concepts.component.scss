@@ -5,8 +5,8 @@ section {
 
     main {
         ul {
-	        display: grid;
-	        grid-template-columns: 1fr 1fr;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
 
             li {
@@ -19,9 +19,31 @@ section {
                 padding: var(--padding);
 
                 h3 {
+                    transition: opacity var(--animation--duration--normal), transform var(--animation--duration--slow);
+
+                    &:not(.fade-in) {
+                        opacity: 0;
+                        transform: translateY(-2rem);
+                    }
+
+                    &.fade-in {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
 
                 p {
+                    transition: opacity var(--animation--duration--normal), transform var(--animation--duration--slow);
+
+                    &:not(.fade-in) {
+                        opacity: 0;
+                        transform: translateY(2rem);
+                    }
+
+                    &.fade-in {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
             }
         }
