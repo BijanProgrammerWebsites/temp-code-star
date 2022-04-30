@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {IntersectionObserverService} from '../../services/intersection-observer.service';
 
 interface Item {
     title: string;
@@ -12,7 +13,9 @@ interface Item {
     templateUrl: './timeline.component.html',
     styleUrls: ['./timeline.component.scss'],
 })
-export class TimelineComponent {
+export class TimelineComponent implements AfterViewInit {
+    @ViewChild('section') private section!: ElementRef<HTMLElement>;
+
     public items: Item[] = [
         {
             title: 'آزمون ورودی دوره فرانت‌اند',
@@ -155,4 +158,11 @@ export class TimelineComponent {
             ],
         },
     ];
+
+    public constructor(private service: IntersectionObserverService) {}
+
+    public ngAfterViewInit(): void {
+        const options: IntersectionObserverInit = {rootMargin: '-120px 0px'};
+        this.service.initObserver(this.section.nativeElement, 'header, li', options);
+    }
 }
