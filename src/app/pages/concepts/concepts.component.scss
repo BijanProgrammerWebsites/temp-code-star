@@ -72,3 +72,16 @@ section {
         }
     }
 }
+
+@media (max-width: 1080px) {
+    section {
+        main {
+            ul {
+                grid-template-columns: 1fr;
+
+                li {
+                }
+            }
+        }
+    }
+}
