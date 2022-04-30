@@ -1,4 +1,7 @@
 section {
+    background-color: var(--color--primary);
+    color: var(--color--primary-opposite);
+
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -29,6 +32,7 @@ section {
             --border: var(--border-width) dashed currentColor;
 
             position: relative;
+            isolation: isolate;
 
             display: flex;
             flex-direction: column;
@@ -42,7 +46,7 @@ section {
                 inset-inline-start: calc(50% - var(--border-width));
                 z-index: -1;
 
-                height: 100%;
+                height: calc(100%);
 
                 border-inline-end: var(--border);
 
@@ -58,8 +62,8 @@ section {
                     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
                     .content {
-                        background-color: var(--color--primary);
-                        color: var(--color--primary-opposite);
+                        background-color: var(--color--primary-opposite);
+                        color: var(--color--primary);
 
                         display: flex;
                         flex-direction: column;
@@ -72,8 +76,8 @@ section {
                         transition: transform var(--animation--duration--normal) var(--animation--duration--normal);
 
                         *::selection {
-                            background-color: var(--color--primary-opposite);
-                            color: var(--color--primary);
+                            background-color: var(--color--primary);
+                            color: var(--color--primary-opposite);
                         }
 
                         .title,
@@ -123,7 +127,7 @@ section {
                     .date {
                         grid-column: 2;
 
-                        background-color: var(--color--body-background);
+                        background-color: var(--color--primary);
 
                         display: grid;
                         place-content: center;

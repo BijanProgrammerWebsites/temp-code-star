@@ -1,4 +1,7 @@
 section {
+    background-color: var(--color--primary);
+    color: var(--color--primary-opposite);
+
     display: flex;
     flex-direction: column;
     gap: 4rem;
