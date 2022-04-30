@@ -98,7 +98,7 @@ section {
 
     .scroll-indicator {
         position: absolute;
-        inset-block-end: 0;
+        inset-block-end: 6rem;
         inset-inline-end: var(--full-width-padding-inline);
         overflow: hidden;
 
