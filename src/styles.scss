@@ -22,11 +22,10 @@
     --box-shadow--subtle: 0 0.2rem 1rem 0 var(--color--box-shadow--subtle);
 
     --section-padding-block: 10rem;
+    --minimum-inline-padding: 2rem;
 
     --full-width: 160rem;
-    --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
-
-    --shell--padding: 2rem;
+    --full-width-padding-inline: max((100% - var(--full-width)) / 2, var(--minimum-inline-padding));
 
     --border-radius: 0.4rem;
 
@@ -51,6 +50,8 @@
 }
 
 html {
+    //overflow-x: hidden;
+
     font-family: Peyda, sans-serif;
     font-size: 62.5%;
 

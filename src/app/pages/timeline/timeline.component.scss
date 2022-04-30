@@ -43,7 +43,7 @@ section {
 
                 position: absolute;
                 inset-block-start: 50%;
-                inset-inline-start: calc(50% - var(--border-width));
+                inset-inline-start: calc(50% - var(--border-width) / 2);
                 z-index: -1;
 
                 height: calc(100%);
@@ -161,11 +161,6 @@ section {
 
                 &:nth-of-type(2n + 1) {
                     --starting-position-multiplier: 1;
-
-                    .circle {
-                        .line {
-                        }
-                    }
                 }
 
                 &:nth-of-type(2n) {
@@ -231,6 +226,42 @@ section {
                             .day,
                             .month {
                                 opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    section {
+        main {
+            ul {
+                &::before {
+                    inset-inline-end: calc(6rem - var(--border-width) / 2);
+
+                    transform: translateY(-50%);
+                }
+
+                li {
+                    grid-template-columns: 1fr 20rem;
+
+                    .circle {
+                        grid-template-columns: 1fr 12rem;
+                    }
+
+                    &:nth-of-type(2n) {
+                        --starting-position-multiplier: 1;
+
+                        .card {
+                            grid-column: 1;
+                        }
+
+                        .circle {
+                            .line {
+                                grid-column: 1;
                             }
                         }
                     }
