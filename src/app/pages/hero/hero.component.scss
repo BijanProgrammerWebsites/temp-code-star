@@ -126,11 +126,19 @@ section {
 }
 
 @media (max-width: 800px) {
-	section {
-		main {
-			align-items: center;
-			
-			text-align: center;
-		}
-	}
+    section {
+        main {
+            align-items: center;
+
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        .scroll-indicator {
+            display: none;
+        }
+    }
 }
