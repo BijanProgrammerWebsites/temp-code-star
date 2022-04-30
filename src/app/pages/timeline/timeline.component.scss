@@ -260,22 +260,6 @@ section {
                             }
                         }
                     }
-
-                    &:not(.fade-in) {
-                        .card {
-                            .content {
-                                transform: translateY(-100%);
-                            }
-                        }
-                    }
-
-                    &.fade-in {
-                        .card {
-                            .content {
-                                transform: translateY(0);
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -310,6 +294,22 @@ section {
 
                         .date {
                             grid-column: 1 !important;
+                        }
+                    }
+
+                    &:not(.fade-in) {
+                        .card {
+                            .content {
+                                transform: translateY(-101%);
+                            }
+                        }
+                    }
+
+                    &.fade-in {
+                        .card {
+                            .content {
+                                transform: translateY(0);
+                            }
                         }
                     }
                 }
