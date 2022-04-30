@@ -68,7 +68,7 @@ section {
 
             &.fade-in {
                 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                transform: translateY(0%);
+                transform: translateY(0);
             }
         }
 
@@ -84,7 +84,7 @@ section {
 
             &.fade-in {
                 opacity: 1;
-                transform: translateY(0%);
+                transform: translateY(0);
             }
 
             &:hover {

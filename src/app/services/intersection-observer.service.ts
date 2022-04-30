@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
     providedIn: 'root',
 })
 export class IntersectionObserverService {
-    public initializeIntersectionObserver(container: HTMLElement, selector: string): void {
+    public initObserver(container: HTMLElement, selector: string, options?: IntersectionObserverInit): void {
         const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             entries.forEach((entry) => {
                 const element: HTMLElement | null = entry.target as HTMLElement;
@@ -14,7 +14,7 @@ export class IntersectionObserverService {
 
                 observer.unobserve(element);
             });
-        });
+        }, options || {});
 
         this.observeElements(observer, container, selector);
     }

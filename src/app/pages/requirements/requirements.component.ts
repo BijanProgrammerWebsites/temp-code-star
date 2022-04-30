@@ -15,10 +15,10 @@ export class RequirementsComponent implements AfterViewInit {
     private observer!: IntersectionObserver;
 
     public ngAfterViewInit(): void {
-        this.initializeIntersectionObserver();
+        this.initObserver();
     }
 
-    private initializeIntersectionObserver(): void {
+    private initObserver(): void {
         this.observer = new IntersectionObserver(
             (entries: IntersectionObserverEntry[]) => {
                 entries.forEach((entry) => {

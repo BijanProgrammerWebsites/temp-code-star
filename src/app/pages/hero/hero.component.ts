@@ -12,6 +12,6 @@ export class HeroComponent implements AfterViewInit {
     public constructor(private service: IntersectionObserverService) {}
 
     public ngAfterViewInit(): void {
-        this.service.initializeIntersectionObserver(this.section.nativeElement, '.watermark, .line, p, .button');
+        this.service.initObserver(this.section.nativeElement, '.watermark, .line, p, .button');
     }
 }

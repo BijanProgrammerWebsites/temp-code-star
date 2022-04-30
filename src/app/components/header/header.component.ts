@@ -12,6 +12,6 @@ export class HeaderComponent implements AfterViewInit {
     public constructor(private service: IntersectionObserverService) {}
 
     public ngAfterViewInit(): void {
-        this.service.initializeIntersectionObserver(this.header.nativeElement, 'a');
+        this.service.initObserver(this.header.nativeElement, 'a');
     }
 }
