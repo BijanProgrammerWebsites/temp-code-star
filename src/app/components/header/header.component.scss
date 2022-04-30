@@ -30,7 +30,7 @@ header {
 
             transform: scaleX(0);
 
-            transition: transform var(--animation--duration--normal);
+            transition: transform var(--animation--duration--fast);
         }
 
         &:hover {

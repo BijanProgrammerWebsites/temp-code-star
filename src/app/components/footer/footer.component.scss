@@ -1,8 +1,9 @@
 footer {
     display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 4rem;
+    column-gap: 5rem;
+    row-gap: 2rem;
 
     padding-block: 2rem;
     padding-inline: var(--full-width-padding-inline);
@@ -11,8 +12,46 @@ footer {
 
     ul {
         display: flex;
-        gap: 2rem;
-	    
-	    margin-inline-start: auto;
+        gap: 3rem;
+
+        margin-inline-start: auto;
+
+        li {
+            a {
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+
+                &::after {
+                    content: "";
+
+                    display: block;
+
+                    border-block-end: 0.2rem solid currentColor;
+
+                    transform: scaleX(0);
+
+                    transition: transform var(--animation--duration--fast);
+                }
+
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    footer {
+        justify-content: center;
+
+        text-align: center;
+
+        ul {
+            margin-inline: auto;
+        }
     }
 }
