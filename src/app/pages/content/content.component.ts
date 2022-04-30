@@ -14,7 +14,7 @@ export class ContentComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         const options: IntersectionObserverInit = {rootMargin: '-120px 0px'};
-        this.service.initObserver(this.frontendSection.nativeElement, '.icon, h3, p', options);
-        this.service.initObserver(this.softwareSection.nativeElement, '.icon, h3, p', options);
+        this.service.initObserver(this.frontendSection.nativeElement, 'header, .icon, h3, p', options);
+        this.service.initObserver(this.softwareSection.nativeElement, 'header, .icon, h3, p', options);
     }
 }

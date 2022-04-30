@@ -3,6 +3,26 @@ section {
     flex-direction: column;
     gap: 8rem;
 
+    header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        h2 {
+            transition: transform var(--animation--duration--slow);
+        }
+
+        &:not(.fade-in) {
+            h2 {
+                transform: translateY(100%);
+            }
+        }
+
+        &.fade-in {
+            h2 {
+                transform: translateY(0%);
+            }
+        }
+    }
+
     main {
         ul {
             display: flex;

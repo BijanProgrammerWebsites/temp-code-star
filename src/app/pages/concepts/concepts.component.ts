@@ -13,6 +13,6 @@ export class ConceptsComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         const options: IntersectionObserverInit = {rootMargin: '-120px 0px'};
-        this.service.initObserver(this.section.nativeElement, 'h3, p', options);
+        this.service.initObserver(this.section.nativeElement, 'header, h3, p', options);
     }
 }

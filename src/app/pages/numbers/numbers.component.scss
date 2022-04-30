@@ -3,6 +3,26 @@ section {
     flex-direction: column;
     gap: 4rem;
 
+    header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        h2 {
+            transition: transform var(--animation--duration--slow);
+        }
+
+        &:not(.fade-in) {
+            h2 {
+                transform: translateY(100%);
+            }
+        }
+
+        &.fade-in {
+            h2 {
+                transform: translateY(0%);
+            }
+        }
+    }
+
     main {
         margin: auto;
 
@@ -14,24 +34,56 @@ section {
             li {
                 flex: 1 0 auto;
 
+                .number,
+                .title {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+                    .text {
+                        transition: transform var(--animation--duration--slow) var(--animation--duration--slow);
+                    }
+                }
+
                 .number {
-                    margin-block-end: -3rem;
+                    --starting-position-multiplier: 1;
 
                     font-size: 14.4rem;
                     font-weight: 700;
-                    line-height: 1;
+
+                    .text {
+                        height: 1em;
+                    }
                 }
 
-                .title::before {
-                    content: "";
-
-                    display: block;
-
+                .line {
                     border-block-end: 0.2rem solid currentColor;
+
+                    transition: transform var(--animation--duration--slow);
                 }
 
                 .title {
+                    --starting-position-multiplier: -1;
+
                     font-size: 3.6rem;
+                }
+
+                &:not(.fade-in) {
+                    .text {
+                        transform: translateY(calc(var(--starting-position-multiplier) * 100%));
+                    }
+
+                    .line {
+                        transform: scaleX(0);
+                    }
+                }
+
+                &.fade-in {
+                    .text {
+                        transform: translateY(0%);
+                    }
+
+                    .line {
+                        transform: scaleX(1);
+                    }
                 }
             }
         }
