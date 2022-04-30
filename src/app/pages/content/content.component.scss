@@ -107,3 +107,33 @@ section {
         }
     }
 }
+
+@media (max-width: 1080px) {
+    section {
+        main {
+            ul {
+                li {
+                    flex-direction: column;
+
+                    .icon {
+                        &:not(.fade-in) {
+                            transform: translateY(-4rem);
+                        }
+                    }
+
+                    &:nth-of-type(2n) {
+                        .icon {
+                            order: 0;
+                        }
+                    }
+
+                    &:nth-of-type(2n + 1) {
+                        .icon {
+                            order: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
