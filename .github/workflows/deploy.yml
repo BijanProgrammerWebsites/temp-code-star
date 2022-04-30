@@ -24,4 +24,4 @@ jobs:
                       npm i
                       ng build --base-href=/code-star/
                       rm -rf /var/temp/bijanprogrammer.com/html/code-star
-                      cp -a . /var/temp/bijanprogrammer.com/html/code-star
+                      cp -a dist/code-star/. /var/temp/bijanprogrammer.com/html/code-star

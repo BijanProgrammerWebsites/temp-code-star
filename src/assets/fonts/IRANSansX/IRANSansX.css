@@ -21,61 +21,61 @@ This set of fonts are used in this project under the license: SNBEKD
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 100;
-    src: url("./IRANSansX-thin.woff") format("woff");
+    src: url("./IRANSansX-Thin.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 200;
-    src: url("./IRANSansX-UltraLight.woff") format("woff");
+    src: url("./IRANSansX-ExtraLight.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 300;
-    src: url("./IRANSansX-light.woff") format("woff");
+    src: url("./IRANSansX-Light.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 500;
-    src: url("./IRANSansX-medium.woff") format("woff");
+    src: url("./IRANSansX-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 600;
-    src: url("./IRANSansX-demibold.woff") format("woff");
+    src: url("./IRANSansX-Medium.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 800;
-    src: url("./IRANSansX-extrabold.woff") format("woff");
+    src: url("./IRANSansX-SemiBold.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: 900;
-    src: url("./IRANSansX-black.woff") format("woff");
+    src: url("./IRANSansX-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: bold;
-    src: url("./IRANSansX-bold.woff") format("woff");
+    src: url("./IRANSansX-ExtraBold.woff") format("woff");
 }
 
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
     font-weight: normal;
-    src: url("./IRANSansX-regular.woff") format("woff");
+    src: url("./IRANSansX-Black.woff") format("woff");
 }
