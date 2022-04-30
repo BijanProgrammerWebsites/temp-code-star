@@ -137,3 +137,17 @@ section {
         }
     }
 }
+
+@media (max-width: 800px) {
+	section {
+		main {
+			ul {
+				li {
+					align-items: center;
+					
+					text-align: center;
+				}
+			}
+		}
+	}
+}
