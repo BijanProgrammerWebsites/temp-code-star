@@ -52,21 +52,39 @@ section {
                 }
 
                 .question {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
                     border-radius: var(--border-radius);
 
                     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+                    .icon {
+                        --rotation: rotate(90deg);
+
+                        transition: transform var(--animation--duration--normal);
+                    }
 
                     .text {
                         transition: transform var(--animation--duration--slow);
                     }
 
                     &:not(.fade-in) {
+                        .icon {
+                            transform: translateX(100%) var(--rotation);
+                        }
+
                         .text {
                             transform: translateY(100%);
                         }
                     }
 
                     &.fade-in {
+                        .icon {
+                            transform: translateX(0%) var(--rotation);
+                        }
+
                         .text {
                             transform: translateY(0%);
                         }
@@ -96,6 +114,17 @@ section {
                 }
 
                 &.active {
+                    *::selection {
+                        background-color: var(--color--primary-opposite);
+                        color: var(--color--primary);
+                    }
+
+                    .question {
+                        .icon {
+                            --rotation: rotate(0deg);
+                        }
+                    }
+
                     .answer {
                         .text {
                             height: auto;

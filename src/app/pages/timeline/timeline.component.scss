@@ -6,6 +6,11 @@ section {
     flex-direction: column;
     gap: 4rem;
 
+    *::selection {
+        background-color: var(--color--primary-opposite);
+        color: var(--color--primary);
+    }
+
     header {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
@@ -43,7 +48,7 @@ section {
 
                 position: absolute;
                 inset-block-start: 50%;
-                inset-inline-start: calc(50% - var(--border-width) / 2);
+                inset-inline-start: calc(50% - var(--border-width));
                 z-index: -1;
 
                 height: calc(100%);

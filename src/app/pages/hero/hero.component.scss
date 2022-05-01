@@ -104,6 +104,9 @@ section {
 
         font-size: 7.2rem;
 
+        pointer-events: none;
+        user-select: none;
+
         .arrow {
             animation: hero-scroll-indicator-animation 2s infinite;
         }

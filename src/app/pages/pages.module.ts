@@ -14,6 +14,7 @@ import {RequirementsComponent} from './requirements/requirements.component';
 import {ContentComponent} from './content/content.component';
 import {TechnologiesModule} from '../technologies/technologies.module';
 import {ConceptsComponent} from './concepts/concepts.component';
+import {IconsModule} from '../icons/icons.module';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,7 @@ import {ConceptsComponent} from './concepts/concepts.component';
         ContentComponent,
         ConceptsComponent,
     ],
-    imports: [CommonModule, RouterModule, ComponentsModule, PipesModule, LogosModule, TechnologiesModule],
+    imports: [CommonModule, RouterModule, ComponentsModule, PipesModule, LogosModule, TechnologiesModule, IconsModule],
     exports: [
         HeroComponent,
         FaqComponent,
