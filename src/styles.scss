@@ -143,6 +143,8 @@ body {
 }
 
 section {
+    overflow-x: hidden;
+
     min-height: 100vh;
 
     padding-block: var(--section-padding-block);
