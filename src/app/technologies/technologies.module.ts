@@ -2,10 +2,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {AngularComponent} from './angular/angular.component';
+import {AspDotnetCoreComponent} from './asp-dotnet-core/asp-dotnet-core.component';
 import {CSharpComponent} from './c-sharp/c-sharp.component';
 import {CssComponent} from './css/css.component';
-import {DotNetCoreComponent} from './dot-net-core/dot-net-core.component';
 import {ElasticsearchComponent} from './elasticsearch/elasticsearch.component';
+import {EntityFrameworkCoreComponent} from './entity-framework-core/entity-framework-core.component';
 import {HtmlComponent} from './html/html.component';
 import {JavascriptComponent} from './javascript/javascript.component';
 import {KibanaComponent} from './kibana/kibana.component';
@@ -19,10 +20,11 @@ import {XunitComponent} from './xunit/xunit.component';
 @NgModule({
     declarations: [
         AngularComponent,
+        AspDotnetCoreComponent,
         CSharpComponent,
         CssComponent,
-        DotNetCoreComponent,
         ElasticsearchComponent,
+        EntityFrameworkCoreComponent,
         HtmlComponent,
         JavascriptComponent,
         KibanaComponent,
@@ -36,10 +38,11 @@ import {XunitComponent} from './xunit/xunit.component';
     imports: [CommonModule],
     exports: [
         AngularComponent,
+        AspDotnetCoreComponent,
         CSharpComponent,
         CssComponent,
-        DotNetCoreComponent,
         ElasticsearchComponent,
+        EntityFrameworkCoreComponent,
         HtmlComponent,
         JavascriptComponent,
         KibanaComponent,
